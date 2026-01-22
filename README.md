@@ -1,6 +1,6 @@
 # Student Management System Express API
 
-A Node.js Express API for **Student Management** System with MongoDB integration.
+A Node.js Express API for **Student Management System** with MongoDB integration.
 
 ## Project Structure
 
