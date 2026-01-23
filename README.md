@@ -17,7 +17,16 @@ sms-express/
 |   |   |-- verifyToken.js                  # JWT verification middleware
 |   |
 |   |-- models/
-|   |   |-- user.model.js                   # User schema and model
+|   |   |-- attendance.model.js             # Attendance schema defination
+|   |   |-- course.model.js                 # Course schema defination
+|   |   |-- enrollment.model.js             # Enrollment schema defination
+|   |   |-- exam.model.js                   # Exam schema defination
+|   |   |-- marks.model.js                  # Marks schema defination
+|   |   |-- material.model.js               # Material schema defination
+|   |   |-- notification.model.js           # Notification schema defination
+|   |   |-- student.model.js                # Student schema defination
+|   |   |-- teacher.model.js                # Teacher schema defination
+|   |   |-- user.model.js                   # User schema defination
 |   |
 |   |-- routes/
 |   |   |-- auth.routes.js                  # Authentication API endpoints
