@@ -3,6 +3,7 @@ import dotenv from "dotenv";
 import cors from "cors";
 import cookieParser from "cookie-parser";
 import { connectDB } from "./config/db.config.js";
+import router from "./routes/auth.routes.js";
 
 dotenv.config();
 const app = express();
@@ -12,6 +13,8 @@ app.use(express.json());
 app.use(cookieParser());
 
 const PORT = process.env.PORT || 5000;
+
+app.use(router);
 
 app.get("/", (req, res) => {
   res.send("Hello World");
