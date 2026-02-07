@@ -60,6 +60,23 @@ export const login = async (req, res) => {
 };
 
 export const getMe = async (req, res) => {
-  const user = await User.findById(req.userId).select("-password");
-  res.json({ user });
+  try {
+    const user = await User.findById(req.userId).select("-password");
+    res.json({ user });
+  } catch (err) {
+    res.status(500).json({ message: "Server error" });
+  }
+};
+
+export const logout = (req, res) => {
+  res.clearCookie("token", {
+    httpOnly: true,
+    secure: process.env.NODE_ENV === "production",
+    sameSite: "lax",
+  });
+
+  res.status(200).json({
+    success: true,
+    message: "Logged out successfully",
+  });
 };
