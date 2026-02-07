@@ -4,7 +4,7 @@ const studentSchema = new mongoose.Schema(
   {
     department: { type: String, required: true },
     rollNo: { type: String, required: true, unique: true },
-    semester: { type: Number, required: true },
+    semester: { type: String, required: true },
     user: { type: mongoose.Schema.Types.ObjectId, ref: "User", required: true },
   },
   { timestamps: true },
