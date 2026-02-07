@@ -12,9 +12,9 @@ import {
 const adminRouter = Router();
 
 adminRouter.get("/api/students", verifyToken, isAdmin, getAllStudents);
-adminRouter.get("/api/student", verifyToken, isAdmin, getStudent);
+adminRouter.get("/api/student/:id", verifyToken, isAdmin, getStudent);
 adminRouter.post("/api/student", verifyToken, isAdmin, createStudent);
-adminRouter.put("/api/student", verifyToken, isAdmin, editStudent);
-adminRouter.delete("/api/student", verifyToken, isAdmin, deleteStudent);
+adminRouter.put("/api/student/:id", verifyToken, isAdmin, editStudent);
+adminRouter.delete("/api/student/:id", verifyToken, isAdmin, deleteStudent);
 
 export default adminRouter;
