@@ -3,7 +3,8 @@ import dotenv from "dotenv";
 import cors from "cors";
 import cookieParser from "cookie-parser";
 import { connectDB } from "./config/db.config.js";
-import router from "./routes/auth.routes.js";
+import authRouter from "./routes/auth.routes.js";
+import adminRouter from "./routes/admin.routes.js";
 
 dotenv.config();
 const app = express();
@@ -14,7 +15,8 @@ app.use(cookieParser());
 
 const PORT = process.env.PORT || 5000;
 
-app.use(router);
+app.use(authRouter);
+app.use(adminRouter);
 
 app.get("/", (req, res) => {
   res.send("Hello World");
